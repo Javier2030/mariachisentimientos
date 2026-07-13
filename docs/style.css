@@ -65,7 +65,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(38,7,12,.72);backdrop-fi
 
 .hero{position:relative;color:#fff;padding:130px 0 56px;overflow:hidden;isolation:isolate;background:linear-gradient(rgba(28,5,8,.72),rgba(61,10,18,.66) 55%,rgba(28,5,8,.88)),url(fotos/hero.jpg) center 30%/cover no-repeat,var(--wine-deep)}
 @media(max-width:760px){
-.hero{padding:calc(75vw + 14px) 0 0;background:linear-gradient(rgba(28,5,8,.10) 0,rgba(28,5,8,.10) calc(75vw - 30px),rgba(38,7,12,.97) calc(75vw - 1px),rgba(28,5,8,0) 75vw),url(fotos/hero-m.jpg) center top/100% auto no-repeat,radial-gradient(600px 300px at 85% 30%,rgba(232,199,90,.14),transparent 60%),linear-gradient(168deg,var(--wine-black),var(--wine-deep) 55%,#26060d)}
+.hero{padding:calc(100vw + 14px) 0 0;background:linear-gradient(rgba(28,5,8,.10) 0,rgba(28,5,8,.10) calc(100vw - 30px),rgba(38,7,12,.97) calc(100vw - 1px),rgba(28,5,8,0) 100vw),url(fotos/hero-m.jpg) center top/100% auto no-repeat,radial-gradient(600px 300px at 85% 30%,rgba(232,199,90,.14),transparent 60%),linear-gradient(168deg,var(--wine-black),var(--wine-deep) 55%,#26060d)}
 .hero h1{margin:10px 0 6px}
 .hero .sub{font-size:15.5px;margin-bottom:20px}
 .hero .tagline{margin-bottom:8px}
@@ -254,7 +254,7 @@ footer a:hover{color:var(--gold-2)}
 
 /* ── Chips de confianza: los 5 en UNA línea en móvil ── */
 @media(max-width:760px){
-.hero{padding:calc(75vw + 14px) 0 0}
+.hero{padding:calc(100vw + 14px) 0 0}
 .trust{flex-wrap:nowrap;gap:6px;margin-top:10px}
 .hero-cta{gap:8px}
 .hero .sub{margin-bottom:14px}
@@ -273,7 +273,7 @@ footer a:hover{color:var(--gold-2)}
 @supports (background-image:image-set(url("x.avif") type("image/avif"))){
 .hero{background:linear-gradient(rgba(28,5,8,.72),rgba(61,10,18,.66) 55%,rgba(28,5,8,.88)),image-set(url(fotos/hero.avif) type("image/avif"),url(fotos/hero.jpg) type("image/jpeg")) center 30%/cover no-repeat,var(--wine-deep)}
 @media(max-width:760px){
-.hero{background:linear-gradient(rgba(28,5,8,.10) 0,rgba(28,5,8,.10) calc(75vw - 30px),rgba(38,7,12,.97) calc(75vw - 1px),rgba(28,5,8,0) 75vw),image-set(url(fotos/hero-m.avif) type("image/avif"),url(fotos/hero-m.jpg) type("image/jpeg")) center top/100% auto no-repeat,radial-gradient(600px 300px at 85% 30%,rgba(232,199,90,.14),transparent 60%),linear-gradient(168deg,var(--wine-black),var(--wine-deep) 55%,#26060d)}
+.hero{background:linear-gradient(rgba(28,5,8,.10) 0,rgba(28,5,8,.10) calc(100vw - 30px),rgba(38,7,12,.97) calc(100vw - 1px),rgba(28,5,8,0) 100vw),image-set(url(fotos/hero-m.avif) type("image/avif"),url(fotos/hero-m.jpg) type("image/jpeg")) center top/100% auto no-repeat,radial-gradient(600px 300px at 85% 30%,rgba(232,199,90,.14),transparent 60%),linear-gradient(168deg,var(--wine-black),var(--wine-deep) 55%,#26060d)}
 }
 }
 /* ── Flayers de precios: NEGRO Y ORO 2026 (borde de oro animado, precio en oro líquido) ── */
