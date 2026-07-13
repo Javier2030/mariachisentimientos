@@ -515,7 +515,7 @@ h2.note::before{content:"✦";display:block;color:var(--gold-2,#E8C75A);margin-b
 .respuesta{background:linear-gradient(168deg,#fffdf7,#fbf1e2);border:1px solid rgba(201,162,39,.45);border-left:5px solid #C9A227;border-radius:18px;box-shadow:0 22px 50px -22px rgba(0,0,0,.5);padding:22px 28px}
 .respuesta p{color:#5b1b3d;font-size:16.5px;line-height:1.8;margin:0;text-shadow:none}
 /* Tarjetas “Por qué elegirnos”: títulos parejos */
-.rev h3{color:#a02e5e!important}
+.rev h3{color:#fff!important}
 /* Video: marco de galería y pie con carácter */
 .vidwrap{max-width:600px}
 .vidppal{border:3px solid rgba(232,199,90,.6);box-shadow:0 30px 70px -28px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.06)}
