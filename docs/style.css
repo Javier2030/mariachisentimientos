@@ -65,7 +65,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(90,20,52,.80);backdrop-f
 
 .hero{position:relative;color:#fff;padding:84px 0 44px;overflow:hidden;isolation:isolate;background:linear-gradient(rgba(158,44,92,.62),rgba(214,106,150,.48) 55%,rgba(90,20,52,.82)),url(fotos/hero.jpg) center 30%/cover no-repeat,#d66a96}
 @media(max-width:760px){
-.hero{padding:calc(62.3vw - 2px) 0 0;background:linear-gradient(rgba(158,44,92,.10) 0,rgba(158,44,92,.10) calc(62.3vw - 30px),rgba(90,20,52,.97) calc(62.3vw - 1px),rgba(46,10,30,0) 62.3vw),url(fotos/hero-m.jpg) center top/100% auto no-repeat,radial-gradient(600px 300px at 85% 30%,rgba(232,199,90,.14),transparent 60%),linear-gradient(168deg,#5a1434,#a02e5e 55%,#d66a96)}
+.hero{padding:calc(62.3vw - 2px) 0 0;background:linear-gradient(rgba(158,44,92,.10) 0,rgba(158,44,92,.10) calc(62.3vw - 8px),rgba(90,20,52,.97) calc(62.3vw - 1px),rgba(46,10,30,0) 62.3vw),url(fotos/hero-m.jpg) center top/100% auto no-repeat,radial-gradient(600px 300px at 85% 30%,rgba(232,199,90,.14),transparent 60%),linear-gradient(168deg,#5a1434,#a02e5e 55%,#d66a96)}
 .hero h1{margin:0 0 6px}
 .hero .sub{font-size:15.5px;margin-bottom:20px}
 .hero .tagline{margin-bottom:8px}
@@ -273,7 +273,7 @@ footer a:hover{color:var(--gold-2)}
 @supports (background-image:image-set(url("x.avif") type("image/avif"))){
 .hero{background:linear-gradient(rgba(158,44,92,.62),rgba(214,106,150,.48) 55%,rgba(90,20,52,.82)),image-set(url(fotos/hero.avif) type("image/avif"),url(fotos/hero.jpg) type("image/jpeg")) center 30%/cover no-repeat,var(--wine-deep)}
 @media(max-width:760px){
-.hero{background:linear-gradient(rgba(158,44,92,.10) 0,rgba(158,44,92,.10) calc(62.3vw - 30px),rgba(90,20,52,.97) calc(62.3vw - 1px),rgba(46,10,30,0) 62.3vw),image-set(url(fotos/hero-m.avif) type("image/avif"),url(fotos/hero-m.jpg) type("image/jpeg")) center top/100% auto no-repeat,radial-gradient(600px 300px at 85% 30%,rgba(232,199,90,.14),transparent 60%),linear-gradient(168deg,#5a1434,#a02e5e 55%,#d66a96)}
+.hero{background:linear-gradient(rgba(158,44,92,.10) 0,rgba(158,44,92,.10) calc(62.3vw - 8px),rgba(90,20,52,.97) calc(62.3vw - 1px),rgba(46,10,30,0) 62.3vw),image-set(url(fotos/hero-m.avif) type("image/avif"),url(fotos/hero-m.jpg) type("image/jpeg")) center top/100% auto no-repeat,radial-gradient(600px 300px at 85% 30%,rgba(232,199,90,.14),transparent 60%),linear-gradient(168deg,#5a1434,#a02e5e 55%,#d66a96)}
 }
 }
 /* ── Flayers de precios: NEGRO Y ORO 2026 (borde de oro animado, precio en oro líquido) ── */
