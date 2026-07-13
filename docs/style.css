@@ -63,7 +63,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(90,20,52,.80);backdrop-f
 .nav-cta{display:flex;align-items:center;gap:12px}
 .burger{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer}
 
-.hero{position:relative;color:#fff;padding:130px 0 56px;overflow:hidden;isolation:isolate;background:linear-gradient(rgba(158,44,92,.62),rgba(214,106,150,.48) 55%,rgba(90,20,52,.82)),url(fotos/hero.jpg) center 30%/cover no-repeat,#d66a96}
+.hero{position:relative;color:#fff;padding:84px 0 44px;overflow:hidden;isolation:isolate;background:linear-gradient(rgba(158,44,92,.62),rgba(214,106,150,.48) 55%,rgba(90,20,52,.82)),url(fotos/hero.jpg) center 30%/cover no-repeat,#d66a96}
 @media(max-width:760px){
 .hero{padding:calc(62.3vw + 14px) 0 0;background:linear-gradient(rgba(158,44,92,.10) 0,rgba(158,44,92,.10) calc(62.3vw - 30px),rgba(90,20,52,.97) calc(62.3vw - 1px),rgba(46,10,30,0) 62.3vw),url(fotos/hero-m.jpg) center top/100% auto no-repeat,radial-gradient(600px 300px at 85% 30%,rgba(232,199,90,.14),transparent 60%),linear-gradient(168deg,#5a1434,#a02e5e 55%,#d66a96)}
 .hero h1{margin:10px 0 6px}
