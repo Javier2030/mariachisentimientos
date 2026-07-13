@@ -487,3 +487,4 @@ h2.note.zoomed{transform:none;color:var(--gold-2);text-shadow:none}
 .vidcap{max-width:520px;margin:12px auto 0;font-size:15px;color:var(--gold-2,#E8C75A);font-weight:700}
 @media(max-width:760px){.vidwrap,.vidcap{max-width:100%}}
 @media(max-width:760px){.hero h1{margin:0 0 6px}.hero .wrap{padding-top:0}}
+@media(max-width:760px){.hero h1{font-size:clamp(28px,8.2vw,38px);padding:8px 18px;border-radius:14px}}
