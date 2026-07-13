@@ -520,3 +520,10 @@ h2.note::before{content:"✦";display:block;color:var(--gold-2,#E8C75A);margin-b
 .vidwrap{max-width:600px}
 .vidppal{border:3px solid rgba(232,199,90,.6);box-shadow:0 30px 70px -28px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.06)}
 .vidcap{font-style:italic;color:#f3ddc4;font-weight:600;font-size:15px}
+/* Composición hero escritorio: caras despejadas */
+@media(min-width:761px){
+.hero .sub{display:none}
+.hero .eyebrow{margin-top:168px}
+.hero h1{font-size:clamp(40px,4.6vw,68px)}
+.hero .tagline{margin-top:4px}
+}
