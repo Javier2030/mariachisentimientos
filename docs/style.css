@@ -52,7 +52,7 @@ img{max-width:100%}
 .prose{max-width:780px;margin:0 auto}
 .prose p{color:#3a2c24}
 
-header{position:sticky;top:0;z-index:50;background:rgba(38,7,12,.72);backdrop-filter:blur(16px) saturate(1.4);border-bottom:1px solid rgba(232,199,90,.35)}
+header{position:sticky;top:0;z-index:50;background:rgba(24,66,38,.80);backdrop-filter:blur(16px) saturate(1.4);border-bottom:1px solid rgba(232,199,90,.35)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1180px;margin:0 auto}
 .logo{display:flex;align-items:center;gap:10px;color:#fff;font-family:"Fraunces";font-weight:800;font-size:19px;letter-spacing:-.01em}
 .logo .mark{font-size:24px;filter:drop-shadow(0 0 8px var(--gold-glow))}
@@ -63,9 +63,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(38,7,12,.72);backdrop-fi
 .nav-cta{display:flex;align-items:center;gap:12px}
 .burger{display:none;background:none;border:0;color:#fff;font-size:24px;cursor:pointer}
 
-.hero{position:relative;color:#fff;padding:130px 0 56px;overflow:hidden;isolation:isolate;background:linear-gradient(rgba(28,5,8,.72),rgba(61,10,18,.66) 55%,rgba(28,5,8,.88)),url(fotos/hero.jpg) center 30%/cover no-repeat,var(--wine-deep)}
+.hero{position:relative;color:#fff;padding:130px 0 56px;overflow:hidden;isolation:isolate;background:linear-gradient(rgba(34,90,52,.62),rgba(60,130,80,.48) 55%,rgba(24,66,38,.82)),url(fotos/hero.jpg) center 30%/cover no-repeat,#3c8250}
 @media(max-width:760px){
-.hero{padding:calc(100vw + 14px) 0 0;background:linear-gradient(rgba(28,5,8,.10) 0,rgba(28,5,8,.10) calc(100vw - 30px),rgba(38,7,12,.97) calc(100vw - 1px),rgba(28,5,8,0) 100vw),url(fotos/hero-m.jpg) center top/100% auto no-repeat,radial-gradient(600px 300px at 85% 30%,rgba(232,199,90,.14),transparent 60%),linear-gradient(168deg,var(--wine-black),var(--wine-deep) 55%,#26060d)}
+.hero{padding:calc(100vw + 14px) 0 0;background:linear-gradient(rgba(34,90,52,.10) 0,rgba(34,90,52,.10) calc(100vw - 30px),rgba(24,66,38,.97) calc(100vw - 1px),rgba(28,5,8,0) 100vw),url(fotos/hero-m.jpg) center top/100% auto no-repeat,radial-gradient(600px 300px at 85% 30%,rgba(232,199,90,.14),transparent 60%),linear-gradient(168deg,#184226,#24663a 55%,#3c8250)}
 .hero h1{margin:10px 0 6px}
 .hero .sub{font-size:15.5px;margin-bottom:20px}
 .hero .tagline{margin-bottom:8px}
@@ -194,7 +194,7 @@ footer a:hover{color:var(--gold-2)}
 .reveal.in{opacity:1;transform:none}
 
 @media(max-width:900px){
-  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(38,7,12,.97);backdrop-filter:blur(16px);flex-direction:column;padding:18px;gap:16px;border-bottom:2px solid var(--gold)}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(24,66,38,.97);backdrop-filter:blur(16px);flex-direction:column;padding:18px;gap:16px;border-bottom:2px solid var(--gold)}
   .nav-links.open{display:flex}
   .burger{display:block}
   .hero{padding:96px 0 110px}
@@ -271,9 +271,9 @@ footer a:hover{color:var(--gold-2)}
 .gallery picture{display:contents}
 @view-transition{navigation:auto}
 @supports (background-image:image-set(url("x.avif") type("image/avif"))){
-.hero{background:linear-gradient(rgba(28,5,8,.72),rgba(61,10,18,.66) 55%,rgba(28,5,8,.88)),image-set(url(fotos/hero.avif) type("image/avif"),url(fotos/hero.jpg) type("image/jpeg")) center 30%/cover no-repeat,var(--wine-deep)}
+.hero{background:linear-gradient(rgba(34,90,52,.62),rgba(60,130,80,.48) 55%,rgba(24,66,38,.82)),image-set(url(fotos/hero.avif) type("image/avif"),url(fotos/hero.jpg) type("image/jpeg")) center 30%/cover no-repeat,var(--wine-deep)}
 @media(max-width:760px){
-.hero{background:linear-gradient(rgba(28,5,8,.10) 0,rgba(28,5,8,.10) calc(100vw - 30px),rgba(38,7,12,.97) calc(100vw - 1px),rgba(28,5,8,0) 100vw),image-set(url(fotos/hero-m.avif) type("image/avif"),url(fotos/hero-m.jpg) type("image/jpeg")) center top/100% auto no-repeat,radial-gradient(600px 300px at 85% 30%,rgba(232,199,90,.14),transparent 60%),linear-gradient(168deg,var(--wine-black),var(--wine-deep) 55%,#26060d)}
+.hero{background:linear-gradient(rgba(34,90,52,.10) 0,rgba(34,90,52,.10) calc(100vw - 30px),rgba(24,66,38,.97) calc(100vw - 1px),rgba(28,5,8,0) 100vw),image-set(url(fotos/hero-m.avif) type("image/avif"),url(fotos/hero-m.jpg) type("image/jpeg")) center top/100% auto no-repeat,radial-gradient(600px 300px at 85% 30%,rgba(232,199,90,.14),transparent 60%),linear-gradient(168deg,#184226,#24663a 55%,#3c8250)}
 }
 }
 /* ── Flayers de precios: NEGRO Y ORO 2026 (borde de oro animado, precio en oro líquido) ── */
@@ -416,9 +416,9 @@ h2.note.zoomed{transform:none;color:var(--gold-2);text-shadow:none}
 .tel-hero{font-size:34px;padding:18px 34px;border-width:2px;border-radius:20px}
 }
 @media(min-width:761px){
-.hero{background:linear-gradient(rgba(28,5,8,.38),rgba(61,10,18,.30) 55%,rgba(28,5,8,.82)),url(fotos/hero.jpg) center 30%/cover no-repeat,var(--wine-deep)}
+.hero{background:linear-gradient(rgba(34,90,52,.34),rgba(60,130,80,.26) 55%,rgba(24,66,38,.78)),url(fotos/hero.jpg) center 30%/cover no-repeat,var(--wine-deep)}
 @supports (background-image:image-set(url("x.avif") type("image/avif"))){
-.hero{background:linear-gradient(rgba(28,5,8,.38),rgba(61,10,18,.30) 55%,rgba(28,5,8,.82)),image-set(url(fotos/hero.avif) type("image/avif"),url(fotos/hero.jpg) type("image/jpeg")) center 30%/cover no-repeat,var(--wine-deep)}
+.hero{background:linear-gradient(rgba(34,90,52,.34),rgba(60,130,80,.26) 55%,rgba(24,66,38,.78)),image-set(url(fotos/hero.avif) type("image/avif"),url(fotos/hero.jpg) type("image/jpeg")) center 30%/cover no-repeat,var(--wine-deep)}
 }
 }
 /* PC: legibilidad del texto sobre la foto destapada */
