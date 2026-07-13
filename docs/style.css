@@ -281,7 +281,7 @@ footer a:hover{color:var(--gold-2)}
 .plan{--mbang:0deg;border:1.5px solid transparent;border-radius:24px;
  background:
   radial-gradient(130% 70% at 50% -12%,rgba(232,199,90,.16),transparent 55%) padding-box,
-  linear-gradient(165deg,#140709 0%,#220d12 48%,#0b0405 100%) padding-box,
+  linear-gradient(165deg,#3c0e29 0%,#54163a 48%,#2c081e 100%) padding-box,
   conic-gradient(from var(--mbang),#6b4e12,#C9A227 22%,#ffe9a8 30%,#E8C75A 38%,#6b4e12 55%,#a8871f 75%,#6b4e12) border-box;
  box-shadow:0 24px 60px -18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,240,200,.06);
  animation:mbSpin 7s linear infinite}
@@ -296,7 +296,7 @@ footer a:hover{color:var(--gold-2)}
 .plan li::before{color:#ffe9a8;text-shadow:0 0 8px rgba(232,199,90,.6)}
 .plan.pop{background:
   radial-gradient(130% 70% at 50% -12%,rgba(232,199,90,.26),transparent 60%) padding-box,
-  linear-gradient(165deg,#1a0a0d 0%,#2a1016 45%,#0d0507 100%) padding-box,
+  linear-gradient(165deg,#44112e 0%,#5e1a42 45%,#300a21 100%) padding-box,
   conic-gradient(from var(--mbang),#8f741c,#E8C75A 18%,#fff6d8 28%,#E8C75A 38%,#8f741c 52%,#C9A227 72%,#8f741c) border-box;
  border:2px solid transparent;box-shadow:0 30px 74px -18px var(--gold-glow),inset 0 1px 0 rgba(255,240,200,.1);animation-duration:5s}
 .plan.pop:hover{box-shadow:0 40px 90px -18px rgba(232,199,90,.5)}
@@ -309,7 +309,7 @@ body{background:#42102c;background-image:radial-gradient(1100px 520px at 85% -5%
 .section h2{color:var(--gold-2)}
 .section p,.prose p{color:#d9cbb6}
 .section .lead{color:#b3a48d}
-.alt{background:radial-gradient(1200px 500px at 85% -10%,rgba(232,199,90,.08),transparent 60%),radial-gradient(900px 420px at 0% 110%,rgba(214,106,150,.12),transparent 55%),#120609}
+.alt{background:radial-gradient(1200px 500px at 85% -10%,rgba(232,199,90,.08),transparent 60%),radial-gradient(900px 420px at 0% 110%,rgba(214,106,150,.12),transparent 55%),#380c26}
 .eyebrow{color:var(--gold)}
 .step{background:rgba(255,253,247,.04);border:1px solid rgba(232,199,90,.22);backdrop-filter:blur(12px)}
 .step h3{color:var(--gold-2)}
@@ -326,7 +326,7 @@ body{background:#42102c;background-image:radial-gradient(1100px 520px at 85% -5%
 .rep .card ul::-webkit-scrollbar-track{background:rgba(255,255,255,.05)}
 .zonas a,.zonas span{background:rgba(255,253,247,.05)!important;border:1px solid rgba(232,199,90,.25)!important;color:#e9ddcb!important}
 .ytcap{background:linear-gradient(transparent,rgba(0,0,0,.9))}
-.gallery img{background:linear-gradient(135deg,#241016,#170a0e)}
+.gallery img{background:linear-gradient(135deg,#54163a,#3c0e29)}
 .breadcrumbs,.breadcrumbs a{color:#9c8d76}
 table,td,th{color:#d9cbb6;border-color:rgba(232,199,90,.2)!important}
 blockquote{background:rgba(255,253,247,.04);border-left:3px solid var(--gold);color:#d9cbb6}
