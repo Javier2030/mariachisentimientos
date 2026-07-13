@@ -1,0 +1,9 @@
+generate.py
+*.py
+__pycache__/
+rank_watch*
+index_watch*
+dom_watch*
+*.log
+PLAN*.md
+planes*.md
