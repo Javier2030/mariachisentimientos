@@ -488,3 +488,35 @@ h2.note.zoomed{transform:none;color:var(--gold-2);text-shadow:none}
 @media(max-width:760px){.vidwrap,.vidcap{max-width:100%}}
 @media(max-width:760px){.hero h1{margin:0 0 6px}.hero .wrap{padding-top:0}}
 @media(max-width:760px){.hero h1{font-size:clamp(22px,6.9vw,34px);padding:8px 16px;border-radius:14px}}
+/* ══ Refinamiento estético (composición, no parches) ══ */
+/* Título: texto dorado degradado, sin placas que tapen la foto */
+.hero h1{background:linear-gradient(168deg,#ffedb0,#E8C75A 42%,#C9A227 90%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0;border-radius:0;box-shadow:none;filter:drop-shadow(0 3px 3px rgba(22,4,12,.95)) drop-shadow(0 10px 34px rgba(22,4,12,.75));letter-spacing:-.02em}
+.hero .tagline{font-size:clamp(18px,2.2vw,25px)}
+.hero .tagline strong{color:#ffe9a8;background:none;padding:0;border-radius:0;box-shadow:none;text-shadow:0 2px 4px rgba(22,4,12,.9),0 8px 28px rgba(22,4,12,.7)}
+/* Línea "de Janeth Ortiz": legible en píldora oscura */
+.hero .eyebrow{color:#ffdf9e;background:rgba(28,5,16,.5);padding:7px 16px;border-radius:999px;backdrop-filter:blur(6px);border:1px solid rgba(232,199,90,.3)}
+.hero .eyebrow::before{display:none}
+.hero .sub{color:#fdf3e3;text-shadow:0 1px 3px rgba(22,4,12,.9),0 6px 22px rgba(22,4,12,.6);max-width:620px;margin-left:auto;margin-right:auto;font-weight:600}
+/* Escrim inferior en escritorio para que el texto respire sobre la foto */
+@media(min-width:761px){
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(28,5,16,.18) 0%,rgba(28,5,16,.05) 26%,rgba(30,6,20,.52) 58%,rgba(30,6,20,.9) 100%)}
+.hero{padding:96px 0 60px}
+}
+/* Móvil: título dorado más presente, bloque aireado */
+@media(max-width:760px){
+.hero h1{font-size:clamp(27px,8vw,38px);padding:0 10px;margin-top:10px}
+.hero .tagline{font-size:17.5px}
+.hero .sub{font-size:15.5px}
+}
+/* Nota tras los planes: susurro, no grito */
+h2.note{font-family:"Mulish",sans-serif;font-size:16.5px;line-height:1.7;font-weight:600;color:#eccfdc;max-width:600px;margin:30px auto 0;text-align:center;letter-spacing:0}
+h2.note::before{content:"✦";display:block;color:var(--gold-2,#E8C75A);margin-bottom:8px;font-size:14px}
+/* Caja resumen: tarjeta crema elegante con filo dorado */
+.respuesta{background:linear-gradient(168deg,#fffdf7,#fbf1e2);border:1px solid rgba(201,162,39,.45);border-left:5px solid #C9A227;border-radius:18px;box-shadow:0 22px 50px -22px rgba(0,0,0,.5);padding:22px 28px}
+.respuesta p{color:#5b1b3d;font-size:16.5px;line-height:1.8;margin:0;text-shadow:none}
+/* Tarjetas “Por qué elegirnos”: títulos parejos */
+.rev h3{color:#a02e5e!important}
+/* Video: marco de galería y pie con carácter */
+.vidwrap{max-width:600px}
+.vidppal{border:3px solid rgba(232,199,90,.6);box-shadow:0 30px 70px -28px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.06)}
+.vidcap{font-style:italic;color:#f3ddc4;font-weight:600;font-size:15px}
