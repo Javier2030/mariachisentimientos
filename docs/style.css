@@ -527,3 +527,10 @@ h2.note::before{content:"✦";display:block;color:var(--gold-2,#E8C75A);margin-b
 .hero h1{font-size:clamp(40px,4.6vw,68px)}
 .hero .tagline{margin-top:4px}
 }
+/* Cuadro resumen: tipografía elegante y teléfono completo */
+.respuesta{position:relative;padding:26px 30px 24px}
+.respuesta::before{content:"❝";position:absolute;top:8px;left:18px;font-family:"Fraunces",Georgia,serif;font-size:44px;color:rgba(201,162,39,.5);line-height:1}
+.respuesta p{font-family:"Fraunces",Georgia,serif;font-size:18.5px;line-height:1.8;color:#4a1030;text-align:center;letter-spacing:.005em}
+.respuesta strong{color:#8f2350;font-weight:800}
+.respuesta .tel-fijo{white-space:nowrap;color:#7a6012}
+@media(max-width:760px){.respuesta{padding:24px 22px 20px}.respuesta p{font-size:17px;line-height:1.75}}
