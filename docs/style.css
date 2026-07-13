@@ -43,7 +43,7 @@ img{max-width:100%}
 .section .lead{color:var(--muted);max-width:660px;font-size:17.5px;margin-bottom:34px}
 .section p{font-size:16.5px;margin-bottom:15px}
 .center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
-.alt{background:radial-gradient(1200px 500px at 85% -10%, rgba(201,162,39,.10), transparent 60%),radial-gradient(900px 420px at 0% 110%, rgba(163,22,33,.07), transparent 55%),var(--cream)}
+.alt{background:radial-gradient(1200px 500px at 85% -10%, rgba(201,162,39,.10), transparent 60%),radial-gradient(900px 420px at 0% 110%, rgba(214,106,150,.07), transparent 55%),var(--cream)}
 .divider{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold);font-size:20px;margin:6px 0 30px}
 .divider::before,.divider::after{content:"";height:1px;width:70px;background:linear-gradient(90deg,transparent,var(--gold))}
 .divider::after{background:linear-gradient(270deg,transparent,var(--gold))}
@@ -188,7 +188,7 @@ footer a:hover{color:var(--gold-2)}
 .wa-float{position:fixed;right:22px;bottom:22px;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,#25c05e,#189a48);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 14px 36px -8px rgba(31,175,84,.6);z-index:60;transition:transform .3s var(--ease);animation:waPulse 2.6s infinite}
 .wa-float:hover{transform:scale(1.12) rotate(6deg)}
 @keyframes waPulse{0%{box-shadow:0 14px 36px -8px rgba(31,175,84,.6),0 0 0 0 rgba(37,192,94,.4)}70%{box-shadow:0 14px 36px -8px rgba(31,175,84,.6),0 0 0 18px rgba(37,192,94,0)}100%{box-shadow:0 14px 36px -8px rgba(31,175,84,.6),0 0 0 0 rgba(37,192,94,0)}}
-@keyframes ripple{0%{box-shadow:0 0 0 0 rgba(163,22,33,.45)}70%{box-shadow:0 0 0 22px rgba(163,22,33,0)}100%{box-shadow:0 0 0 0 rgba(163,22,33,0)}}
+@keyframes ripple{0%{box-shadow:0 0 0 0 rgba(214,106,150,.45)}70%{box-shadow:0 0 0 22px rgba(214,106,150,0)}100%{box-shadow:0 0 0 0 rgba(214,106,150,0)}}
 
 .reveal{opacity:0;transform:translateY(34px) scale(.99);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .reveal.in{opacity:1;transform:none}
@@ -207,7 +207,7 @@ footer a:hover{color:var(--gold-2)}
 
 /* ── Lightbox: foto al frente ── */
 .gallery img{cursor:zoom-in}
-#lightbox{position:fixed;inset:0;background:rgba(20,4,7,.93);display:none;align-items:center;justify-content:center;z-index:100;cursor:zoom-out;backdrop-filter:blur(8px);padding:18px}
+#lightbox{position:fixed;inset:0;background:rgba(54,13,36,.93);display:none;align-items:center;justify-content:center;z-index:100;cursor:zoom-out;backdrop-filter:blur(8px);padding:18px}
 #lightbox.on{display:flex;animation:lbIn .25s var(--ease)}
 #lightbox img{max-width:96vw;max-height:90vh;border-radius:16px;box-shadow:0 30px 80px -10px rgba(0,0,0,.8);border:1px solid var(--glass-border);animation:lbZoom .3s var(--ease)}
 @keyframes lbIn{from{opacity:0}to{opacity:1}}
@@ -305,11 +305,11 @@ footer a:hover{color:var(--gold-2)}
 @media(min-width:1200px){.plans{grid-template-columns:repeat(5,1fr);gap:16px}}
 .plan{padding:28px 20px}
 /* ══ NEXUS LUXE: el diseño negro+vidrio+oro aplicado a TODO el sitio ══ */
-body{background:#0a0406;background-image:radial-gradient(1100px 520px at 85% -5%,rgba(232,199,90,.10),transparent 55%),radial-gradient(900px 480px at -5% 100%,rgba(163,22,33,.12),transparent 55%);color:#e9ddcb}
+body{background:#42102c;background-image:radial-gradient(1100px 520px at 85% -5%,rgba(232,199,90,.10),transparent 55%),radial-gradient(900px 480px at -5% 100%,rgba(214,106,150,.12),transparent 55%);color:#e9ddcb}
 .section h2{color:var(--gold-2)}
 .section p,.prose p{color:#d9cbb6}
 .section .lead{color:#b3a48d}
-.alt{background:radial-gradient(1200px 500px at 85% -10%,rgba(232,199,90,.08),transparent 60%),radial-gradient(900px 420px at 0% 110%,rgba(163,22,33,.12),transparent 55%),#120609}
+.alt{background:radial-gradient(1200px 500px at 85% -10%,rgba(232,199,90,.08),transparent 60%),radial-gradient(900px 420px at 0% 110%,rgba(214,106,150,.12),transparent 55%),#120609}
 .eyebrow{color:var(--gold)}
 .step{background:rgba(255,253,247,.04);border:1px solid rgba(232,199,90,.22);backdrop-filter:blur(12px)}
 .step h3{color:var(--gold-2)}
@@ -426,7 +426,7 @@ h2.note.zoomed{transform:none;color:var(--gold-2);text-shadow:none}
 .hero .sub{text-shadow:0 2px 12px rgba(0,0,0,.9),0 0 34px rgba(0,0,0,.65);font-weight:600}
 .hero .eyebrow{text-shadow:0 2px 10px rgba(0,0,0,.95)}
 .hero .tagline{text-shadow:0 2px 14px rgba(0,0,0,.85)}
-.tel-hero{background:rgba(20,6,9,.55);text-shadow:0 2px 8px rgba(0,0,0,.7)}
+.tel-hero{background:rgba(54,13,36,.55);text-shadow:0 2px 8px rgba(0,0,0,.7)}
 }
 /* PC: el contenido del hero arranca justo debajo del menú */
 @media(min-width:761px){
@@ -441,7 +441,7 @@ h2.note.zoomed{transform:none;color:var(--gold-2);text-shadow:none}
 /* ── Lightbox: abre creciendo desde pequeño, cierra encogiéndose ── */
 #lightbox img{animation:lbGrow .32s var(--ease)}
 @keyframes lbGrow{from{transform:scale(.35);opacity:0}to{transform:scale(1);opacity:1}}
-#lightbox.closing{animation:none;background:rgba(20,4,7,0);backdrop-filter:blur(0)}
+#lightbox.closing{animation:none;background:rgba(54,13,36,0);backdrop-filter:blur(0)}
 #lightbox.closing img{animation:lbShrink .3s var(--ease) forwards}
 @keyframes lbShrink{from{transform:scale(1);opacity:1}to{transform:scale(.35);opacity:0}}
 /* ── FIX 2 columnas celular: anular dense y row-spans que dejaban vacía la col derecha ── */
@@ -478,7 +478,7 @@ h2.note.zoomed{transform:none;color:var(--gold-2);text-shadow:none}
  box-shadow:0 24px 60px -16px rgba(0,0,0,.7),0 0 0 2px var(--gold-2);border-color:transparent;rotate:none}
 /* velo dorado sutil que se enciende al pasar */
 .gallery picture::after{content:"";position:absolute;inset:0;border-radius:20px;pointer-events:none;
- background:linear-gradient(180deg,transparent 62%,rgba(20,4,7,.42));opacity:.9;transition:opacity .5s}
+ background:linear-gradient(180deg,transparent 62%,rgba(54,13,36,.42));opacity:.9;transition:opacity .5s}
 .gallery picture:hover::after{opacity:.25}
 }
 @media(max-width:760px){.plan li{font-size:24px;line-height:1.25;padding:8px 0 8px 29px}.plan li::before{font-size:17px;top:11px}.plan .sub{font-size:12px}.plan h3{font-size:18px}}
