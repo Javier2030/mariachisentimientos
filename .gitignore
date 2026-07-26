@@ -7,3 +7,9 @@ dom_watch*
 *.log
 PLAN*.md
 planes*.md
+
+# internos: no publicar
+claude_sentimientos_session.sh
+index_history.json
+page_hashes.json
+sentimientos_state.json
