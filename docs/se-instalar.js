@@ -1,4 +1,4 @@
-/* Banner de instalación PWA — Mariachi Sentimientos Tecalitlán */
+/* Banner de instalación PWA — Mariachi Sentimientos */
 (function () {
   var BRAND = "Mariachi Sentimientos";
   var ICON = "/icon-192.png";
