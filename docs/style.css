@@ -1,10 +1,7 @@
 @font-face{font-family:'Fraunces';font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/fraunces-var.woff2) format('woff2')}
 @font-face{font-family:'Fraunces';font-style:italic;font-weight:100 900;font-display:swap;src:url(fonts/fraunces-italic.woff2) format('woff2')}
 @font-face{font-family:'Mulish';font-style:normal;font-weight:200 900;font-display:swap;src:url(fonts/mulish-var.woff2) format('woff2')}
-/* ══════════════════════════════════════════════════════════════════
-   MARIACHI BONITO TECALITLÁN — Sistema de diseño 2026
-   Cinematográfico · Glassmorphism · Micro-interacciones · 0 requests extra
-   ══════════════════════════════════════════════════════════════════ */
+/* Mariachi Sentimientos — hoja de estilos del sitio */
 :root{
   --wine:#c2447e; --wine-deep:#5a1434; --wine-black:#2e0a1e;
   --crimson:#A31621; --gold:#C9A227; --gold-2:#E8C75A; --gold-glow:rgba(232,199,90,.35);

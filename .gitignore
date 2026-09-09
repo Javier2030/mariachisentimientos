@@ -1,4 +1,6 @@
 generate.py
+generate.py.bak*
+*.bak*
 *.py
 __pycache__/
 rank_watch*
