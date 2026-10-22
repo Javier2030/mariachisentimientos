@@ -568,3 +568,4 @@ footer a:hover{color:#ffe9a8}
 /* Chips de zonas: dorado al pasar */
 .zona{transition:border-color .25s,color .25s,transform .25s}
 .zona:hover{border-color:rgba(232,199,90,.7);color:#ffe9a8;transform:translateY(-1px)}
+.fmapa .fgrupo{break-inside:avoid;margin:0 0 16px}.fmapa .fgrupo h4{font-family:inherit;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-2);margin:0 0 6px}.fmapa .fgrupo a{display:inline-block;padding:1px 0;line-height:1.55}
