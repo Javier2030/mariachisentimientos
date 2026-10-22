@@ -1,3 +1,128 @@
+(function () {
+/* Procedencia del visitante (Instagram, Facebook, TikTok) */
+var procedencia = (function () {
+  var W = window, D = document, VIDA = 30 * 864e5, CLAVE = 'sentProc';
+  var rotulos = {
+    instagram: '📸 Vengo de Instagram — ',
+    facebook: '👍 Vengo de Facebook — ',
+    tiktok: '🎵 Vengo de TikTok — '
+  };
+  var textoBase = 'Hola, quiero información de una serenata.';
+  var tieneRotulo = /Vengo de (Instagram|Facebook|TikTok) — /;
+  var esLinkWa = /^(?:(?:https?:)?\/\/(?:wa\.me|(?:www\.|api\.|web\.)?whatsapp\.com)(?:[\/?#]|$)|whatsapp:\/\/)/i;
+
+  function valorQuery(n) {
+    var s = W.location.search;
+    try { return new URLSearchParams(s).get(n); } catch (e) {
+      var m = new RegExp('[?&]' + n + '(?:=([^&]*))?(?:&|$)').exec(s);
+      return m ? (m[1] || '') : null;
+    }
+  }
+  function dominioRef() {
+    var m = /^https?:\/\/([^\/?#:]+)/i.exec(D.referrer || '');
+    return m ? m[1].toLowerCase() : '';
+  }
+  function averiguaFuente() {
+    var us = (valorQuery('utm_source') || '').toLowerCase(), h = dominioRef(), ua = navigator.userAgent || '';
+    if (us === 'instagram' || us === 'ig' || valorQuery('ig') !== null) return 'instagram';
+    if (us === 'facebook' || us === 'fb') return 'facebook';
+    if (us === 'tiktok') return 'tiktok';
+    if (/(^|\.)instagram\.com$/.test(h) || /Instagram/.test(ua)) return 'instagram';
+    if (valorQuery('fbclid') !== null || /(^|\.)facebook\.com$/.test(h) || /FBAN|FBAV/.test(ua)) return 'facebook';
+    if (/(^|\.)tiktok\.com$/.test(h) || /musical_ly|BytedanceWebview|TikTok/.test(ua)) return 'tiktok';
+    return null;
+  }
+  function fuenteVieja() {
+    var r;
+    try { r = JSON.parse(localStorage.getItem(CLAVE)); if (r && rotulos[r.o] && Date.now() - r.t < VIDA) return r.o; } catch (e) {}
+    try { r = JSON.parse(sessionStorage.getItem(CLAVE)); if (r && rotulos[r.o]) return r.o; } catch (e) {}
+    return null;
+  }
+  function recuerdaFuente(o) {
+    var s = JSON.stringify({ o: o, t: Date.now() });
+    try { localStorage.setItem(CLAVE, s); } catch (e) {}
+    try { sessionStorage.setItem(CLAVE, s); } catch (e) {}
+  }
+
+  var nuevo = averiguaFuente(), fuente = nuevo || fuenteVieja();
+  if (nuevo) recuerdaFuente(nuevo);
+  if (!fuente) return function () { return null; };
+
+  function rotula(u) {
+    if (typeof u !== 'string' || !esLinkWa.test(u)) return u;
+    var orig = u, m = rotulos[fuente], hash = '', i = u.indexOf('#');
+    if (i > -1) { hash = u.slice(i); u = u.slice(0, i); }
+    var q = u.indexOf('?'), base = q < 0 ? u : u.slice(0, q);
+    var ps = q < 0 ? [] : u.slice(q + 1).split('&').filter(Boolean), hecho = false;
+    for (var j = 0; j < ps.length && !hecho; j++) {
+      if (!/^text=/i.test(ps[j])) continue;
+      var v = ps[j].slice(5), d = v;
+      try { d = decodeURIComponent(v.replace(/\+/g, ' ')); } catch (e) {}
+      hecho = true;
+      if (tieneRotulo.test(d)) return orig;
+      ps[j] = /^\s*$/.test(d) ? 'text=' + encodeURIComponent(m + textoBase) : 'text=' + encodeURIComponent(m) + v;
+    }
+    if (!hecho) ps.push('text=' + encodeURIComponent(m + textoBase));
+    return base + '?' + ps.join('&') + hash;
+  }
+  function retocaA(el) {
+    if (!el || !el.getAttribute) return;
+    var h = el.getAttribute('href');
+    if (h) { var n = rotula(h); if (n !== h) el.setAttribute('href', n); }
+    var c = el.getAttribute('onclick');
+    if (c && /wa\.me|whatsapp/i.test(c)) {
+      var n2 = c.replace(/https?:\/\/(?:wa\.me\/\d+|(?:api|web|www)\.whatsapp\.com\/send)[^'"\s)]*(?=['"])/gi, rotula);
+      if (n2 !== c) el.setAttribute('onclick', n2);
+    }
+  }
+  function recorreA() {
+    var l = D.querySelectorAll('a[href*="wa.me"],a[href*="whatsapp"],[onclick*="wa.me"],[onclick*="whatsapp"]');
+    for (var i = 0; i < l.length; i++) retocaA(l[i]);
+  }
+
+  recorreA();
+  if (D.readyState === 'loading') D.addEventListener('DOMContentLoaded', recorreA);
+  // enlaces que aparecen después de cargar
+  if (W.MutationObserver) {
+    var t = 0;
+    new MutationObserver(function () {
+      if (t) return;
+      t = setTimeout(function () { t = 0; recorreA(); }, 60);
+    }).observe(D.documentElement, { childList: true, subtree: true, attributes: true, attributeFilter: ['href', 'onclick'] });
+  }
+  // por captura: lo que se haya tocado a mano justo antes del clic también lleva la marca
+  D.addEventListener('click', function (e) {
+    for (var el = e.target; el && el !== D; el = el.parentNode) retocaA(el);
+  }, true);
+  // aperturas programáticas (formularios)
+  var abrir = W.open;
+  W.open = function (u) {
+    var a = Array.prototype.slice.call(arguments);
+    a[0] = rotula(u);
+    return abrir.apply(W, a);
+  };
+
+  // medición
+  function reportaFuente() {
+    try {
+      if (typeof W.clarity === 'function') {
+        W.clarity('set', 'origen', fuente);
+        if (nuevo && !sessionStorage.getItem(CLAVE + 'c')) { sessionStorage.setItem(CLAVE + 'c', '1'); W.clarity('event', 'llegada_' + fuente); }
+      }
+    } catch (e) {}
+    try {
+      if (typeof W.gtag === 'function') {
+        W.gtag('set', { origen_visita: fuente });
+        if (nuevo && !sessionStorage.getItem(CLAVE + 'g')) { sessionStorage.setItem(CLAVE + 'g', '1'); W.gtag('event', 'llegada_origen', { origen: fuente }); }
+      }
+    } catch (e) {}
+  }
+  reportaFuente();
+  W.addEventListener('load', function () { reportaFuente(); setTimeout(reportaFuente, 4000); });
+  return function () { return fuente; };
+})();
+
+})();
 /* Banner de instalación PWA — Mariachi Sentimientos */
 (function () {
   var BRAND = "Mariachi Sentimientos";
